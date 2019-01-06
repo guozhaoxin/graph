@@ -107,3 +107,32 @@ class Queue:
         if not self.header:
             return True
         return False
+
+
+StackNode = QueueNode
+
+class Stack:
+
+    def __init__(self):
+        self.top = None
+
+    def push(self,value):
+        temp = QueueNode(value,self.top)
+        self.top = temp
+
+    def isEmpty(self):
+        if not self.top:
+            return True
+        return False
+
+    def pop(self):
+        if not self.top:
+            return None
+        temp = self.top
+        self.top = self.top.next
+        return temp.value
+
+    def getTop(self):
+        if not self.top:
+            return None
+        return self.top.value

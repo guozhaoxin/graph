@@ -11,7 +11,7 @@ def findNextAdjNode(matrix,start,end = 0):
     '''
     in a given matrix,find the given start node's next adj node which has a index not less
     than end
-    this function is a iterator in fact
+    this function is a iterator i3n factl
     :param matrix: [[]]
     :param start: int,the node's index which is the start node to get the index
     :param end: int,next node index
@@ -25,7 +25,7 @@ def findNextAdjNode(matrix,start,end = 0):
 
     yield -1
 
-def noDirecBFS(graphMatrix,startNode = 0):
+def unDirecBFS(graphMatrix,startNode = 0):
     '''
     this function is used to traversal the undirected graph
     :param graphMatrix:[[]],the graph's adjacent graph
@@ -57,5 +57,5 @@ def noDirecBFS(graphMatrix,startNode = 0):
 
 if __name__ == '__main__':
     from common import noDirecGraphMatrix
-    print(noDirecBFS(noDirecGraphMatrix))
-    print(noDirecBFS(noDirecGraphMatrix,100))
+    print(unDirecBFS(noDirecGraphMatrix))
+    print(unDirecBFS(noDirecGraphMatrix,100))
