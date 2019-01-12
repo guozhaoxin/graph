@@ -30,6 +30,10 @@ the basic solution is :
             if pair(B,L) is shorter,then we update the edgeSet to use B as its root node and the distance to the value 
             of pair(B,L);
     4 execute step 2 -3 by nodes' count - 1 and return the res.
+
+to use the method,like this:
+    res = prim(matrix)
+the matrix is the graph's adj matrix,you must ensure the matrix only contains int or float ele and never < 0.
 '''
 class EdgeSet:
     '''
@@ -88,7 +92,7 @@ def prim(edgeMatrix):
     this function is prim function and is mainly used to generate a edge array whose elements all EdgeSet object
     in this function,you must pass the graph's adj matrix,and this matrix has no ele that is less than 0.
     :param edgeMatrix:[],the graph's adj matrix,and no num is less than 0.
-    :return:dict,please read modify function above.
+    :return:dict,please read modify function above,the method may raise AssertionError.
     '''
     assert edgeMatrix # ensure this graph is not an empty graph
     assert len(edgeMatrix) == len(edgeMatrix[0]) # ensure the adj matrix is a square matrix.
